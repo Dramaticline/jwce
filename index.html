@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
-<meta name="theme-color" content="#f6efe9">
+<meta name="theme-color" content="#2C2115">
 <meta name="description" content="JWCE —— 朝夕 · 一天的事，一天的了。本地优先的情侣日常记录 PWA">
 <title>JWCE</title>
 
@@ -19,7 +19,7 @@
 <meta name="apple-mobile-web-app-title" content="JWCE">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="application-name" content="JWCE">
-<meta name="msapplication-TileColor" content="#f6efe9">
+<meta name="msapplication-TileColor" content="#2C2115">
 <meta name="msapplication-TileImage" content="/icons/icon-192.png">
 <meta name="format-detection" content="telephone=no">
 
@@ -37,18 +37,18 @@
 
 :root {
   /* ---------- 颜色 ---------- */
-  --bg: #f6efe9;
-  --card: #fffdfb;
-  --ink: #2c2724;
-  --ink2: #6b6058;
-  /* 说明文字原为 #9a8d84，在 #f6efe9 上对比度仅 3.2:1，
+  --bg: #2C2115;
+  --card: #3a2e1f;
+  --ink: #f0e8dc;
+  --ink2: #c9bba8;
+  /* 说明文字原为 #9a8d84，在 #2C2115 深棕底上对比度仅 3.2:1，
      远低于 WCAG AA 的 4.5:1；而 .hint / .card-note / .item-s
      这类小字号说明文字大量使用它，低亮度屏上会明显发糊。
      实测选 #756c65：在背景上 4.51:1、在卡片白底上 5.06:1，两端都过。 */
-  --ink3: #756c65;
+  --ink3: #a89a87;
   --brand: #c2705a;
   --brand-soft: #f0ddd6;
-  --line: #e8ded6;
+  --line: #5a4a38;
   --ok: #4a7c59;
   --warn: #b8860b;
   --danger: #a4453b;
@@ -1656,7 +1656,7 @@ body.dark .stat { background: #242220; }
     if (!P.StatusBar) return;
     try {
       await P.StatusBar.setStyle({ style: isDark ? 'DARK' : 'LIGHT' });
-      await P.StatusBar.setBackgroundColor({ color: isDark ? '#1b1a19' : '#f6efe9' });
+      await P.StatusBar.setBackgroundColor({ color: isDark ? '#1b1a19' : '#2C2115' });
     } catch (e) { }
   };
 
