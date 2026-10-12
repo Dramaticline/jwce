@@ -10,14 +10,14 @@
 const CACHE_VERSION = 'jwce-v1.0.0';
 const APP_SHELL = [
   '/',
-  '/index.html',
-  '/offline.html',
-  '/manifest.json',
-  '/icons/icon-192.png',
-  '/icons/icon-512.png',
-  '/icons/icon-192-maskable.png',
-  '/icons/icon-512-maskable.png',
-  '/icons/apple-touch-icon.png'
+  './index.html',
+  './offline.html',
+  './manifest.json',
+  './icons/icon-192.png',
+  './icons/icon-512.png',
+  './icons/icon-192-maskable.png',
+  './icons/icon-512-maskable.png',
+  './icons/apple-touch-icon.png'
 ];
 
 /* ================= 安装 ================= */
@@ -95,9 +95,9 @@ async function cacheFirst(req) {
   } catch (e) {
     // 离线兜底
     if (req.mode === 'navigate') {
-      const fallback = await cache.match('/offline.html');
+      const fallback = await cache.match('./offline.html');
       if (fallback) return fallback;
-      const fb2 = await cache.match('/index.html');
+      const fb2 = await cache.match('./index.html');
       if (fb2) return fb2;
     }
     throw e;
@@ -117,9 +117,9 @@ async function networkFirst(req) {
     const cached = await cache.match(req);
     if (cached) return cached;
     if (req.mode === 'navigate') {
-      const fallback = await cache.match('/offline.html');
+      const fallback = await cache.match('./offline.html');
       if (fallback) return fallback;
-      const fb2 = await cache.match('/index.html');
+      const fb2 = await cache.match('./index.html');
       if (fb2) return fb2;
     }
     throw e;
